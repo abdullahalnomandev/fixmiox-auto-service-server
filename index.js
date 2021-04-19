@@ -119,6 +119,11 @@ client.connect(err => {
 
 });
 
+app.get('/',(req,res)=>{
+
+  res.send('Working it"s working ')
+})
+
 
 app.listen(port, () => {
   console.log(` app listening at port :${port}`)
