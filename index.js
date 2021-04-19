@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const ObjectId = require('mongodb').ObjectID;
-const port = 5000 || process.env.PORT;
+const port = 5000 ;
 const cors = require('cors')
 
 app.use(cors())
@@ -125,6 +125,4 @@ app.get('/',(req,res)=>{
 })
 
 
-app.listen(port, () => {
-  console.log(` app listening at port :${port}`)
-})
+app.listen(process.env.PORT || port )
